@@ -14,7 +14,7 @@ class HomeController extends Controller
     // get home page for user
     public function getHome()
     {
-        $videos=video::get()->all();
+        $videos=video::with('user')->get()->all();
         return view('layouts.starter',compact('videos'));
     }
 

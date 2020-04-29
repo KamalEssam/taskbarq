@@ -36,4 +36,7 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+    public function video(){
+        return $this->hasMany(video::class,'created_by');
+    }
 }

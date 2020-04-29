@@ -58,7 +58,7 @@
                                             </button></td>
                                         <td>{{$video->is_notified}}</td>
                                         <td>{{$video->keyword}}</td>
-                                        <td>{{$video->created_by}}</td>
+                                        <td>{{$video->user->name}}</td>
                                         <td>{{$video->created_at}}</td>
                                         <td>{{$video->updated_at}}</td>
                                         <td><a href="{{route('delete.video',$video->id)}}"><button type="button" class="btn btn-danger">Delete</button></a></td>

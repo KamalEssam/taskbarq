@@ -11,5 +11,7 @@ class video extends Model
         'video_url',
         'image_url', 'created_by'];
 
-
+public function user(){
+    return $this->belongsTo(User::class,'created_by');
+}
 }
